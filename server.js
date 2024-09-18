@@ -1,5 +1,5 @@
 const express = require("express");
-const connectDB = require("./config/db");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
@@ -25,4 +25,4 @@ app.use(express.json());
 app.get("/", (req, res) => res.send("API Running"));
 
 const PORT = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
